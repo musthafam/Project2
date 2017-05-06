@@ -1,4 +1,3 @@
-//sample test case
 describe('First POM Project',function(){
 	var HomePage=require('../page/page.js');
 	var element1 = HomePage.isLogoutPresent();
