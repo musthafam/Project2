@@ -8,7 +8,9 @@ var lastname=element(by.model('selectedEmployee.lastName'));
 var startdate=element(by.model('selectedEmployee.startDate'));
 var Email=element(by.model('selectedEmployee.email'));
 var AddButton=element(by.buttonText('Add'));
+var emplist=element(by.xpath("//div[@id='employee-list-container']/ul/li[3]"));
 var CreateData = require('../TestData/Data.json');
+
 
 this.ClickCreate = function(){
 	create.click();
@@ -37,6 +39,10 @@ this.passEmail = function(){
 
 this.AddClick=function(){
 	AddButton.click();
+}
+
+this.ClickEmp=function(){
+	emplist.click();
 }
 
 };
