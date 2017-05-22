@@ -1,6 +1,6 @@
 describe('First POM Project',function(){
-	var HomePage=require('../page/page.js');
-	var element1 = HomePage.isLogoutPresent();
+	var HomePage=require('../page/homepage.js');
+	//var element1 = HomePage.isLogoutPresent();
 	it('First TC',function(){
 		HomePage.getstarted();
 		HomePage.passUsername();
