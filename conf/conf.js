@@ -1,3 +1,4 @@
+//Config file
 exports.config={
 directConnect:true,
 capabilities:{
