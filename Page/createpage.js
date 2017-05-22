@@ -8,7 +8,7 @@ var lastname=element(by.model('selectedEmployee.lastName'));
 var startdate=element(by.model('selectedEmployee.startDate'));
 var Email=element(by.model('selectedEmployee.email'));
 var AddButton=element(by.buttonText('Add'));
-
+var CreateData = require('../TestData/Data.json');
 
 this.ClickCreate = function(){
 	create.click();
@@ -16,22 +16,22 @@ this.ClickCreate = function(){
 }
 
 this.passFirstname = function(){
-	firstname.sendKeys('Fname');
+	firstname.sendKeys(CreateData[1].firstname);
 	
 }
 
 this.passLastname = function(){
-	lastname.sendKeys('Lanme');
+	lastname.sendKeys(CreateData[1].lastname);
 	
 }
 
 this.passStartdate = function(){
-	startdate.sendKeys('2017-05-22');
+	startdate.sendKeys(CreateData[1].startdate);
 	
 }
 
 this.passEmail = function(){
-	Email.sendKeys('test@protractor.com');
+	Email.sendKeys(CreateData[1].email);
 	
 }
 

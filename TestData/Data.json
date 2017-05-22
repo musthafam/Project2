@@ -2,5 +2,11 @@
 {
  "username": "Luke",
  "passwordField": "Skywalker"
+},
+{
+ "firstname": "FnameTest",
+ "lastname": "LnameTest",
+ "startdate": "2017-05-22",
+ "email": "protractor@test.com"
 }
 ]
