@@ -8,7 +8,7 @@ var lastname=element(by.model('selectedEmployee.lastName'));
 var startdate=element(by.model('selectedEmployee.startDate'));
 var Email=element(by.model('selectedEmployee.email'));
 var AddButton=element(by.buttonText('Add'));
-var emplist=element(by.xpath("//div[@id='employee-list-container']/ul/li[3]"));
+var emplist=element.all(by.repeater("employee in employees"));
 var CreateData = require('../TestData/Data.json');
 
 
@@ -41,8 +41,14 @@ this.AddClick=function(){
 	AddButton.click();
 }
 
-this.ClickEmp=function(){
-	emplist.click();
+this.ClickEmp=function(value){
+	emplist.get(value).click();
+}
+
+this.EmpCountlist=function(){
+	emplist.count().then(function(count) {
+	console.log(count);
+	});
 }
 
 };

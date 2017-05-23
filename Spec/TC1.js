@@ -10,27 +10,30 @@ describe('First POM Project',function(){
 		expect(element(by.css('[ng-click="logout()"]')).isPresent()).toBe(true);
 	});
 	
-	xit('CreateUserTestCase',function(){
+	it('CreateUserTestCase',function(){
 		HomePage.getstarted();
 		HomePage.passUsername();
 		HomePage.passPassword();
 		HomePage.LoginClick();
 		expect(element(by.css('[ng-click="logout()"]')).isPresent()).toBe(true);
+		CreatePage.EmpCountlist();
 		CreatePage.ClickCreate();
 		CreatePage.passFirstname();
 		CreatePage.passLastname();
 		CreatePage.passStartdate();
 		CreatePage.passEmail();
 		CreatePage.AddClick();
+		browser.driver.sleep(3000);
+		CreatePage.EmpCountlist();
 	});
 	
-	it('EditUserTestCase',function(){
+	xit('EditUserTestCase',function(){
 		HomePage.getstarted();
 		HomePage.passUsername();
 		HomePage.passPassword();
 		HomePage.LoginClick();
 		expect(element(by.css('[ng-click="logout()"]')).isPresent()).toBe(true);
-		CreatePage.ClickEmp();
+		CreatePage.ClickEmp(5);
 		browser.driver.sleep(3000);
 	});
 });
