@@ -46,10 +46,14 @@ this.ClickEmp=function(value){
 }
 
 this.EmpCountlist=function(){
-	emplist.count().then(function(count) {
+	return emplist.count();
+}
+
+this.PrintEmpCountlist=function(){
+	emplist.count().then(function(count)
+	{
 	console.log(count);
 	});
 }
-
 };
 module.exports = new CreatePage();

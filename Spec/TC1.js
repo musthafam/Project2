@@ -2,6 +2,7 @@ describe('First POM Project',function(){
 	var HomePage=require('../page/homepage.js');
 	var CreatePage=require('../page/createpage.js');
 	//var element1 = HomePage.isLogoutPresent();
+	var temp=0;
 	xit('LoginTestCase',function(){
 		HomePage.getstarted();
 		HomePage.passUsername();
@@ -16,7 +17,8 @@ describe('First POM Project',function(){
 		HomePage.passPassword();
 		HomePage.LoginClick();
 		expect(element(by.css('[ng-click="logout()"]')).isPresent()).toBe(true);
-		CreatePage.EmpCountlist();
+		CreatePage.PrintEmpCountlist();
+		var emplistBeforecreation = CreatePage.EmpCountlist();
 		CreatePage.ClickCreate();
 		CreatePage.passFirstname();
 		CreatePage.passLastname();
@@ -24,7 +26,9 @@ describe('First POM Project',function(){
 		CreatePage.passEmail();
 		CreatePage.AddClick();
 		browser.driver.sleep(3000);
-		CreatePage.EmpCountlist();
+		CreatePage.PrintEmpCountlist();
+		var emplistAftercreation = CreatePage.EmpCountlist();
+		expect(parseInt(emplistAftercreation)-parseInt(emplistBeforecreation)).toEqual(1);
 	});
 	
 	xit('EditUserTestCase',function(){
