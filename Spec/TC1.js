@@ -2,7 +2,7 @@ describe('First POM Project',function(){
 	var HomePage=require('../page/homepage.js');
 	var CreatePage=require('../page/createpage.js');
 	//var element1 = HomePage.isLogoutPresent();
-	xit('LoginTestCase',function(){
+	it('LoginTestCase',function(){
 		HomePage.getstarted();
 		HomePage.passUsername();
 		HomePage.passPassword();
@@ -27,7 +27,7 @@ describe('First POM Project',function(){
 		CreatePage.EmpCountlist();
 	});
 	
-	xit('EditUserTestCase',function(){
+	it('EditUserTestCase',function(){
 		HomePage.getstarted();
 		HomePage.passUsername();
 		HomePage.passPassword();
