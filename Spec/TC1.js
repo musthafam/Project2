@@ -10,7 +10,7 @@ describe('First POM Project',function(){
 		expect(element(by.css('[ng-click="logout()"]')).isPresent()).toBe(true);
 	});
 	
-	it('CreateUserTestCase',function(){
+	xit('CreateUserTestCase',function(){
 		HomePage.getstarted();
 		HomePage.passUsername();
 		HomePage.passPassword();
@@ -30,7 +30,7 @@ describe('First POM Project',function(){
 		expect(parseInt(emplistAftercreation)-parseInt(emplistBeforecreation)).toEqual(1);
 	});
 	
-	xit('EditUserTestCase',function(){
+	it('EditUserTestCase',function(){
 		HomePage.getstarted();
 		HomePage.passUsername();
 		HomePage.passPassword();

@@ -1,4 +1,11 @@
 //Config file
+
+var Jasmine2HtmlReporter = require('C:/Users/551867/AppData/Roaming/npm/node_modules/protractor/node_modules/protractor-jasmine2-screenshot-reporter');
+
+var reporter = new Jasmine2HtmlReporter({
+  dest: 'D:/Mus/Protractor/ProtractorProject2/ProtractorProject2/Report',
+  filename: 'my-report.html'
+});
 exports.config={
 directConnect:true,
 capabilities:{
@@ -6,6 +13,10 @@ capabilities:{
 },
 framework:'jasmine',
 specs:['../Spec/TC1.js'],
+
+onPrepare: function(){
+	jasmine.getEnv().addReporter(reporter);
+},
 jasmineNodeOpts: {
 	  showColours: true ,
     defaultTimeoutInterval: 30000
